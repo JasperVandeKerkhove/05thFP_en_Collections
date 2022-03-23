@@ -61,7 +61,17 @@ Oefening
 // Je code moet werken voor alle arrays met een oneven aantal elementen
 // Verwijder het eerste element en toon het
 // Voeg vooraan "rap" en "reggae" toe
-
+console.log("****************");
+const stijlen = ["jazz", "blues"];
+console.log(stijlen);
+stijlen.push("rock-n-roll");
+console.log(stijlen);
+stijlen[1] = "klassiek";
+console.log(stijlen);
+console.log(stijlen.shift());
+stijlen.unshift["rap","reggae"];
+console.log(stijlen);
+console.log("****************");
 /*
 Lussen
 */
@@ -98,17 +108,17 @@ console.log(fruit.slice(2, 5)); // ["strawberry", "blueberry", "melon"]
 // De functie indexOf(item, from) zoekt naar item startend van positie from (default waarde 0)
 // en retourneert de index waar het gezochte item gevonden werd. Anders wordt er -1 geretourneerd
 console.log(fruit.indexOf('blueberry')); // 3
-console.log(fruit.indexOf('orange')); // -1
+console.log(fruit.indexOf('orange')); // 0
 
 // De functie lastIndexOf(item, from) doet hetzelfde maar zoekt van rechts naar links
 console.log(fruit.lastIndexOf('blueberry')); // 3
-console.log(fruit.lastIndexOf('orange')); // -1
+console.log(fruit.lastIndexOf('orange')); // 0
 
 // De functie includes(item, from) zoekt naar item startend van positie from
 // en retourneert true wanneer het gezochte item werd gevonden
 console.log(fruit.includes('blueberry')); // true
 console.log(fruit.includes('blueberry', 4)); // false
-console.log(fruit.includes('orange')); // false
+console.log(fruit.includes('orange')); // true
 
 // De functie reverse keert de volgorde van de elementen in de array om
 fruit.reverse();

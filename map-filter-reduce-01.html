@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="module">
+        const a = [11, 18, 6, 16, 8];
+        // const b = a;
+        // for(const x of a){
+        //     if(x >= 10)
+        //     {
+        //         b.push(x);
+        //     }
+        // }
+        const b = a.filter((x) => x >= 10);
+
+        //trurhy en falsy
+        const d = ['a','','b','c',''];
+        const e = d.filter(x => x);
+        console.log(e);
+        console.log(b);
+    </script>
+</body>
+</html>
