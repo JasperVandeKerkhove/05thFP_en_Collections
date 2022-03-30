@@ -8,9 +8,16 @@
 </head>
 <body>
     <script type="module">
-        const a = [1,2,3];
-        const b = a.map((x) => x*2);
-        console.log(b);
+        //imperatieve oplossing
+        const a = [1,2,3, 4]
+        let som = 0;
+        // for (const x of a) {
+        //   som  = som + x;
+        // }
+
+        // declaratieve oplossing
+        som = a.reduce((som,x) => som + x,0);
+        console.log(som); //10
     </script>
 </body>
 </html>

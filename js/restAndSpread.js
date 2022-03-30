@@ -10,6 +10,16 @@ const aMap = new Map([
   ['Burkina Faso', 20903275],
   ['Iceland', 341243]
 ]);
+
+//sorteer op bevolkingsaantal
+
+const array = [...aMap];
+console.log(array);
+array.sort( ([,value],[,value]) => value1 , value2);
+const newMap = new Map(array)
+
+console.log(newMap);
+
 console.log([1, 2, ...aMap, 3, 4]);
 console.log([1, 2, ...aMap.values(), 3, 4]);
 console.log([1, 2, ...aMap.keys(), 3, 4]);

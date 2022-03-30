@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maps en Sets</title>
+</head>
+<body>
+    <h1>Maps en Sets</h1>
+
+    <script type="module">
+        // maps
+        const map1 = new Map();
+
+        //items toevoegen
+        map1.set('jan',2);
+        map1.set('feb',2);
+        map1.set('mrt',3);  
+        map1.set('jan',1);
+        map1.set('apr',4)
+            .set('mei',5);
+        console.log(map1);
+        console.log('de maand maart is nummer:' , map1.get('mrt'));
+        console.log('size:' ,map1.size);
+
+        //keys overlopen
+        for (const key of map1.keys()) {
+            console.log('key: ', key);
+            
+        }
+
+        //values overlopen
+        for (const value of map1.values()) {
+                console.log('value: ', value);
+        }
+
+        const map2 = new Map([
+            ['jan',1],
+            ['feb',2],
+            ['mrt',3],
+            ['apr',4],
+            ['mei',5]
+        ]);
+
+        for (const [key, value] of map2) {
+            //const key = item[0];
+            //const value= item[1];
+            console.log('key: ', key, ' - value', value);
+        }
+
+        // sets
+        // ****
+
+        const set1 = new Set();
+
+
+        set1.add('jan').add('feb').add('mrt');
+        set1.add('feb');
+        console.log(set1);
+
+        const set2 = new Set(
+            ['jan', 'feb', 'mrt']
+        )
+
+        console.log(set2);
+
+        for (const value of set1) {
+            console.log('value: ', value);
+        }
+
+        // spread
+        // ****
+
+        const string = 'test 😂😂😂😂😂';
+        //string opsplitsen in unicode karakters
+
+        const array = [...string];
+        console.log(array);
+
+        // allerlei bewerkingen met array's: samenvoegen, achter elementen
+        const a = [11,12,13,14,6,8];
+        const b = [11,12];
+        let c = [ ...a, ...b];
+        c = [11,13, ...b,6, 8];
+        console.log(c);
+
+        //spread bij functieoproep
+        const max = Math.max(...c);
+        console.log(max);
+
+        // Map omzetten naar array en array-methode toepassen
+        let arr = [...map1];
+        console.log(arr);
+        const arr2 = arr.filter( ([key, value]) => value >= 10).map(([key, value]) => key);
+
+
+        console.log(arr2.join());
+
+        // map => array, dan bewerking, Array => map
+        const arr3 = [...map1];
+        const arr4 = arr.filter( ([ key, value]) => value >= 10);
+        const newMap = new Map(arr4);
+        console.log(newMap);
+
+    </script>
+</body>
+</html>
